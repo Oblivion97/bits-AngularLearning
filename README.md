@@ -30,7 +30,7 @@ Install some useful extensions:
 ----------------------------------------------------------------------------
 To Run Project directly from visual code terminal:
 
-give permission from Power Shell, Run Powershell as an administrator, and run the following command[select All-A](Command): `set-executionpolicy remotesigned`
+give permission from Power Shell, Run Powershell as an administrator, and run the following command. Select All-A(Command): `set-executionpolicy remotesigned`
 
 Open Project Folder in Visual Studio Code. Write the same command in Visual Studio Code Terminal for Run the Project.
 
