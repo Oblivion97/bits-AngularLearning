@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
 </head>
+
 <body>
 
-    <div ng-app="">
+    <div ng-app="myApp">
         <p>Name: <input type="text" ng-model="name"></p>
         <p ng-bind="name"></p>
+
+
+        <div data-ng-init="firstName='John'">
+
+            <p>The name is <span data-ng-bind="firstName"></span></p>
+
+        </div>
+
+        <div>
+            <p>My first expression: {{5+5}}</p>
+        </div>
+
+        <div>
+            <p>Name: <input type="text" ng-model="NameIN"></p>
+            <p>{{NameIN}}</p>
+        </div>
+
+        <div ng-controller="NameController">
+            First Name: <input type="text" name="" id="" ng-model="firstName"><br>
+            Last Name: <input type="text" name="" id="" ng-model="lastName"><br>
+
+            Full Name: {{firstName + " " +lastName}}
+
+        </div>
+
     </div>
-    
 </body>
+
 </html>
