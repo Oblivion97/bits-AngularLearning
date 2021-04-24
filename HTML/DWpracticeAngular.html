@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="">
+<html lang="en" data-ng-app="myAngularApp">
 <!-- initialize angular application -->
 
 <head>
@@ -19,7 +19,7 @@
     <h2>Angular JS - Directives</h2>
     <hr>
 
-
+    <!-- ------------------------------------------------------------------------------------------------- -->
     <h3>Using data directive and binding</h3><br>
     Name:
     <br>
@@ -29,14 +29,14 @@
     Out: {{name}}
     <br>
     <hr>
-
+    <!-- ------------------------------------------------------------------------------------------------- -->
 
     <h3>Data initialize and show with "data-ng-repeat"</h3><br>
     <ul>
         <li data-ng-repeat="personName in names"> {{personName}} </li>
     </ul>
     <hr>
-
+    <!-- ------------------------------------------------------------------------------------------------- -->
 
     <h3>Using Filter</h3><br>
     Search: <input type="text" data-ng-model="searchname"><br>
@@ -55,15 +55,15 @@
         </ul>
     </div>
     <hr>
-
+    <!-- ------------------------------------------------------------------------------------------------- -->
 
     <h2>Angular JS - Views, Controller and Scope</h2>
     <hr>
     <img src="/img/ViewControllerScope.PNG" style="width: 100%;" alt="">
     <hr>
-
+    <!-- ------------------------------------------------------------------------------------------------- -->
     <h3>Using a simple Controller with $Scope</h3>
-    <div data-ng-controller = "SimpleController">
+    <div data-ng-controller="SimpleController">
         Search: <input type="text" data-ng-model="searchName"><br>
         <br>
         <ul>
@@ -73,17 +73,20 @@
         </ul>
 
     </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
 
 
 
+    <!-- -------------------------------------------Dependancy Start------------------------------------------------------ -->
+    <script src="/AngularJS/v1.8.x/angular.min.js"></script>
+    <!-- mantain this order, 1st you need to add angular 2nd your own js file. -->
+    <script src="/JS/DWpracticeAngular.js"></script>
+
+    <link rel="stylesheet" href="/BootStrap/v4.0.0/bootstrap.min.css">
+    <script src="/BootStrap/v4.0.0/jquery.min.js"></script>
+    <script src="/BootStrap/v4.0.0/popper.min.js"></script>
+    <script src="/BootStrap/v4.0.0/bootstrap.min.js"></script>
+    <!-- -------------------------------------------Dependancy End------------------------------------------------------ -->
 </body>
-
-
-<script src="/JS/DWpracticeAngular.js"></script>
-<script src="/AngularJS/v1.8.x/angular.min.js"></script>
-<link rel="stylesheet" href="/BootStrap/v4.0.0/bootstrap.min.css">
-<script src="/BootStrap/v4.0.0/jquery.min.js"></script>
-<script src="/BootStrap/v4.0.0/popper.min.js"></script>
-<script src="/BootStrap/v4.0.0/bootstrap.min.js"></script>
 
 </html>
