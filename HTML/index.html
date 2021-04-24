@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="index.js"></script>
+    <script src="/AngularJS/angular.min.js"></script>
+    <script src="/JS/index.js"></script>
 </head>
 
 <body>
 
-    <div ng-app="myApp">
+    <div ng-app="myApp" ng-init="myCol='lightblue'">
         <p>Name: <input type="text" ng-model="name"></p>
         <p ng-bind="name"></p>
 
@@ -39,6 +39,8 @@
             Full Name: {{firstName + " " +lastName}}
 
         </div>
+
+        <input style="background-color:{{myCol}}" ng-model="myCol">
 
     </div>
 </body>
