@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="">
+<!-- initialize angular application -->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/AngularJS/angular.min.js"></script>
 </head>
 
-<body>
+
+
+<body class="container mt-5 mb-5" data-ng-init="names=['Hridoy','Jacob','Talia','Anna']">
+    <!-- data initialize in angular -->
+
+    <a class="btn btn-primary" target="_blank" href="https://docs.angularjs.org/api">AngularJS: API
+        References</a>
+    <h2>Angular JS - Directives</h2>
+    <hr>
+
+
+    <h3>Using data directive and binding</h3><br>
     Name:
     <br>
     <input type="text" data-ng-model="name">
+    <!-- model adds a property in the memory named as name in this case. create a empty view model and fill it with property in the {{modelname}}- bind the model data  -->
     <br>
     Out: {{name}}
+    <br>
+    <hr>
+
+
+    <h3>Data initialize and show with "data-ng-repeat"</h3><br>
+    <ul>
+        <li data-ng-repeat="personName in names"> {{personName}} </li>
+    </ul>
+    <hr>
+
+
+    <h3>Using Filter</h3><br>
+    Search: <input type="text" data-ng-model="searchname"><br>
+    <br>
+    <div data-ng-init="customers=[{namec:'James Hoog',city:'New York'},
+                            {namec:'Nail Knite',city:'Paris'},
+                            {namec:'Pit Alex',city:'London'},
+                            {namec:'Mc Lyon',city:'Paris'},
+                            {namec:'Paul Adam',city:'Rome'},
+                            {namec:'Lauson Hen',city:'San Jose'}]">
+
+        <ul>
+            <li data-ng-repeat="cust in customers | filter:{namec:searchname} | orderBy:'city'">
+                {{cust.namec | uppercase}} -
+                {{cust.city | uppercase}} </li>
+        </ul>
+    </div>
+    <hr>
+
+
+    <h2>Angular JS - Views, Controller and Scope</h2>
+    <hr>
+    <img src="/img/ViewControllerScope.PNG" style="width: 100%;" alt="">
+    <hr>
+
+
+    <div data-ng-controller = "SimpleController">
+        
+
+    </div>
+
+
 
 </body>
 
+
+<script src="/JS/DWpracticeAngular.js"></script>
+<script src="/AngularJS/v1.8.x/angular.min.js"></script>
 <link rel="stylesheet" href="/BootStrap/v4.0.0/bootstrap.min.css">
 <script src="/BootStrap/v4.0.0/jquery.min.js"></script>
 <script src="/BootStrap/v4.0.0/popper.min.js"></script>
