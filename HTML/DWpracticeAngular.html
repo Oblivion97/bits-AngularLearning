@@ -62,9 +62,15 @@
     <img src="/img/ViewControllerScope.PNG" style="width: 100%;" alt="">
     <hr>
 
-
+    <h3>Using a simple Controller with $Scope</h3>
     <div data-ng-controller = "SimpleController">
-        
+        Search: <input type="text" data-ng-model="searchName"><br>
+        <br>
+        <ul>
+            <li data-ng-repeat="cust in customers | filter:{namec:searchName} | orderBy:'city'">
+                {{cust.namec | uppercase}} -
+                {{cust.city | uppercase}} </li>
+        </ul>
 
     </div>
 

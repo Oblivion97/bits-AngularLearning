@@ -1,5 +1,5 @@
 function SimpleController($scope) {
-    $scope.customersController = [{namec:'James Hoog',city:'New York'},
+    $scope.customers = [{namec:'James Hoog',city:'New York'},
                             {namec:'Nail Knite',city:'Paris'},
                             {namec:'Pit Alex',city:'London'},
                             {namec:'Mc Lyon',city:'Paris'},
