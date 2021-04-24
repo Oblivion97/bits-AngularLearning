@@ -1,4 +1,4 @@
-var app = angular.module('myAngularApp', []);
+var app = angular.module('myAngularApp', []); //empty array is for dependacy injection
 	app.controller('SimpleController', function($scope) {
 	    $scope.customers = [{namec:'James Hoog',city:'New York'},
                             {namec:'Nail Knite',city:'Paris'},
