@@ -69,12 +69,10 @@ app.service('HEX', function () {
         }
 });
 app.controller('customServiceHex', function ($scope, HEX) {
-        var a = Number($scope.number);
         $scope.NumbertoHex = function () {
+                var a = Number($scope.number);
                 $scope.intTOhex = HEX.myFunc(a);
         }
-
-
 });
 
 //-----------------------------------------------------------------------------------
