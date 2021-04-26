@@ -61,6 +61,8 @@ app.controller('intervalController', function ($scope, $interval) {
         }, 1000);
 });
 
+
+//-----------------------------------------------------------------------------------
 app.service('HEX', function () {
         this.myFunc = function (x) {
                 return x.toString(16);
@@ -71,9 +73,11 @@ app.controller('customServiceHex', function ($scope, HEX) {
         $scope.NumbertoHex = function () {
                 $scope.intTOhex = HEX.myFunc(a);
         }
-         
-         
+
+
 });
+
+//-----------------------------------------------------------------------------------
 
 app.controller('AddNumbersController', function ($scope) {
         $scope.AddNumbers = function () {
