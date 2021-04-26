@@ -122,6 +122,25 @@
         <span>The $interval service runs a function every specified millisecond.</span><br>
     </div>
 
+    <br>
+
+    <div data-ng-controller="customServiceHex">
+        <span>The hexadecimal value of 255 is (Custom Service):</span><br>
+        <input data-ng-model="number" ng-keyup="NumbertoHex()">
+        <h3>{{intTOhex}}</h3>
+        <span>A custom service with a method that converts a given number into a hexadecimal number.</span>
+    </div>
+
+    <hr>
+    <div ng-controller="AddNumbersController">
+        <span>Add numbers with controller:</span><br>
+        <input ng-model="a" ng-keyup="AddNumbers()">
+        <input ng-model="b" ng-keyup="AddNumbers()">
+        <br>
+        <span>Sum: {{ sum }}</span>
+    </div>
+
+
     <!-- -------------------------------------------Dependancy Start------------------------------------------------------ -->
     <script src="/AngularJS/v1.8.x/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
