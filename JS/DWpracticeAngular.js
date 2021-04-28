@@ -84,3 +84,11 @@ app.controller('AddNumbersController', function ($scope) {
                 $scope.sum = a + b;
         }
 });
+
+app.controller('poeple', function ($scope, $http) {
+        $http.get('http://127.0.0.1:5501/Data/records.json')
+                .then(function (response) {
+                        $scope.persons = response.data.records;
+
+                });
+});

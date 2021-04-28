@@ -141,6 +141,16 @@
         <br>
         <span>Sum: {{ sum }}</span>
     </div>
+    <hr>
+
+    <div data-ng-controller="poeple">
+        <span>Showing data from JSON object.</span>
+        <ul>
+            <h3>Name and Age of Programmers: </h3>
+            <li data-ng-repeat="person in persons"> {{person.Name}} : {{person.Age}} </li>
+        </ul>
+    </div>
+    <hr>
 
 
     <!-- -------------------------------------------Dependancy Start------------------------------------------------------ -->
